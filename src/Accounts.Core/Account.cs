@@ -12,11 +12,9 @@ namespace Accounts.Core
 
     public class Account
     {
-        private static readonly object syncRoot;
-
         static Account()
         {
-            syncRoot = new object();
+            new object();
         }
 
         public AccountType Type { get; set; }
