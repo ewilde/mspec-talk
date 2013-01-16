@@ -16,6 +16,7 @@ namespace Accounts.UnitTests.Nunit
         public void Transfering_money_between_accounts_when_in_credit()
         {
             Customer customer = CustomerFactory.CustomerWithSavingAndCurrentAccount();
+            customer.SavingsAccount.Credit(150m);
         
             customer.SavingsAccount.Transfer(customer.CurrentAccount, 100m);
 

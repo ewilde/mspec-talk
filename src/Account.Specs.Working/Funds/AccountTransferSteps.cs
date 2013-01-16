@@ -56,5 +56,24 @@ namespace Account.Specs.Working.AccountsTransfer
         {
             Assert.That(customer.SavingsAccount.Balance, Is.EqualTo(0m));
         }
+
+        [When(@"the customer transfers (.*)m between accounts")]
+        public void WhenTheCustomerTransfersMBetweenAccounts(int p0)
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [Then(@"the target account is (.*)m immediately")]
+        public void ThenTheTargetAccountIsMImmediately(int p0)
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [Then(@"the source account is (.*)m immediately")]
+        public void ThenTheSourceAccountIsMImmediately(int p0)
+        {
+            ScenarioContext.Current.Pending();
+        }
+
     }
 }
