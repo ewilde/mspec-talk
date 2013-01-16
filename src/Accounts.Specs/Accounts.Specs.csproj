@@ -57,19 +57,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Accounts\AccountsSteps.cs" />
-    <Compile Include="Accounts\TransferingBetweenAccounts.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TransferingBetweenAccounts.feature</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Accounts\TransferingBetweenAccounts.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>TransferingBetweenAccounts.feature.cs</LastGenOutput>
-    </None>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
