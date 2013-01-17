@@ -6,20 +6,31 @@
 
 
 using System;
-
 using Machine.Fakes;
 using Machine.Specifications;
+using System.Diagnostics;
+using Accounts.Core;
 
-namespace Account.Specs.Working.Funds
-{
-    using System.Diagnostics;
-
-    using Accounts.Core;
-
+namespace Account.Specs.Working
+{       
     [Subject(typeof(Customer))]
     public class When_a_customer_transfers_money_between_accounts
     {
         Establish context = () => customer = CustomerFactory.CustomerWithSavingAndCurrentAccount(savingsAccountCredit:100m);
+
+        Because of = () => customer.SavingsAccount.Transfer(customer.CurrentAccount, 100m);
+        
+        It should_debit_the_saving_account = () => customer.SavingsAccount.Balance.ShouldEqual(0m);
+
+        It should_credit_the_current_account = () => customer.CurrentAccount.Balance.ShouldEqual(100m);
+
+        protected static Customer customer;
+    }
+
+    [Subject(typeof(Customer))]
+    public class When_a_customer_transfers_money_between_accounts_using_behaviours
+    {
+        Establish context = () => customer = CustomerFactory.CustomerWithSavingAndCurrentAccount(savingsAccountCredit: 100m);
 
         Because of = () => customer.SavingsAccount.Transfer(customer.CurrentAccount, 100m);
 
@@ -27,9 +38,8 @@ namespace Account.Specs.Working.Funds
 
         It should_credit_the_current_account = () => customer.CurrentAccount.Balance.ShouldEqual(100m);
 
-        Behaves_like<CustomerWithACurrentAccountInCredit> a_customer_with_a_current_account_in_credit = () => { };                         
+        Behaves_like<CustomerWithACurrentAccountInCredit> a_customer_with_a_current_account_in_credit = () => { };
 
-        
         protected static Customer customer;
     }
 

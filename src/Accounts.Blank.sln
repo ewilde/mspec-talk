@@ -10,9 +10,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{5FD3F4
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accounts.Core", "Accounts.Core\Accounts.Core.csproj", "{DE514928-3ADF-4837-A7F4-95FE59A97E8E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accounts.UnitTests", "Accounts.UnitTests\Accounts.UnitTests.csproj", "{61C580AD-07BE-4E47-9C65-4276F08A0729}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accounts.UnitTests", "Accounts.UnitTests.Blank\Accounts.UnitTests.csproj", "{61C580AD-07BE-4E47-9C65-4276F08A0729}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accounts.Specs", "Accounts.Specs\Accounts.Specs.csproj", "{009DC3C0-3A8A-4148-9981-C5251F5E4D7D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accounts.Specs", "Accounts.Specs.Blank\Accounts.Specs.csproj", "{009DC3C0-3A8A-4148-9981-C5251F5E4D7D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

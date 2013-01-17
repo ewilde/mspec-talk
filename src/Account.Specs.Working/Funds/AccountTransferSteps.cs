@@ -16,8 +16,6 @@ namespace Account.Specs.Working.AccountsTransfer
     {
         Customer customer;
 
-
-
         [Given(@"the source account is sufficient with (\d+)m")]
         public void GivenTheSourceAccountIsSufficient(decimal amount)
         {

@@ -3,12 +3,12 @@
 // Copyright (c) 2012.
 // </copyright>
 // -----------------------------------------------------------------------
-namespace Accounts.UnitTests.Nunit
+
+using Accounts.Core;
+using NUnit.Framework;
+
+namespace Accounts.UnitTests
 {
-    using Accounts.Core;
-
-    using NUnit.Framework;
-
     [TestFixture]
     public class CustomerTests
     {
